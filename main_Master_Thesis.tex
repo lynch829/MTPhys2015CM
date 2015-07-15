@@ -1,0 +1,137 @@
+%###################################################################################
+%	File: 					main_Master_Thesis.tex
+%
+%	Author: 				Christoph Müller
+%	Date started writing:	13.07.2015	
+%
+%	Topic: 					main part Master Thesis  (use this file as master file)
+%	Title: 					"Fast MRI methods for metabolite mapping."
+%
+%###################################################################################
+
+\documentclass[12pt,a4paper]{scrartcl}
+% scrartcl ist eine abgeleitete Artikel-Klasse im Koma-Skript
+% zur Kontrolle des Umbruchs Klassenoption draft verwenden
+
+% die folgenden Packete erlauben den Gebrauch von Umlauten und ß
+% in der Latex Datei
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{latexsym}
+\usepackage{amsmath,amssymb,amsthm}
+
+% Abstand obere Blattkante zur Kopfzeile ist 2.54cm - 15mm
+\setlength{\topmargin}{-15mm}
+
+% Umgebungen für Definitionen, Sätze, usw.
+% Es werden Sätze, Definitionen etc innerhalb einer Section mit
+% 1.1, 1.2 etc durchnummeriert, ebenso die Gleichungen mit (1.1), (1.2) ..
+\newtheorem{Satz}{Satz}[section]
+\newtheorem{Definition}[Satz]{Definition} 
+\newtheorem{Lemma}[Satz]{Lemma}		   
+                  
+\numberwithin{equation}{section} 
+
+% einige Abkuerzungen
+\newcommand{\C}{\mathbb{C}} % komplexe
+\newcommand{\K}{\mathbb{K}} % komplexe
+\newcommand{\R}{\mathbb{R}} % reelle
+\newcommand{\Q}{\mathbb{Q}} % rationale
+\newcommand{\Z}{\mathbb{Z}} % ganze
+\newcommand{\N}{\mathbb{N}} % natuerliche
+
+
+%###################################################################################
+% Begin of Document  
+%###################################################################################
+\begin{document}
+
+% Keine Seitenzahlen im Vorspann
+  \pagestyle{empty}
+
+%###################################################################################
+%  Title Page
+%
+%###################################################################################
+  % Titelblatt der Arbeit
+  \begin{titlepage}
+
+	\begin{center} \large 
+
+	\includegraphics[scale=2]{Images/Uni_Logo-Grundversion_E1_DL_CMYK.pdf} 
+    \vspace*{1cm} 
+
+    Masterarbeit
+    \vspace*{1cm}
+
+    {\huge Fast MRI methods for metabolite mapping.}
+    \vspace*{1.5cm}
+
+    Christoph Müller
+    \vspace*{1cm}
+
+    dd.mm.yyyy
+    \vspace*{1.5cm}
+
+    Betreuung: Jürgen Hennig \\[.5cm]
+		Medizin Physik $\cdot$ Klinik für Radiologie\\
+		Universitätsklinikum Freiburg\\[0.5cm]
+    
+    	Fakultät für Mathematik und Physik \\
+		Albert-Ludwigs Universität Freiburg
+		
+  \end{center}
+\end{titlepage}
+
+%###################################################################################
+%  Table of Contents
+%
+%###################################################################################
+  % Inhaltsverzeichnis
+  \tableofcontents
+
+%###################################################################################
+%  Include all Parts
+%
+%###################################################################################
+\newpage
+% Ab sofort Seitenzahlen in der Kopfzeile anzeigen
+\pagestyle{headings}
+
+\include{part_Introduction}
+
+\include{part_Theory}
+
+ 
+%###################################################################################
+%  Make the Bibliography
+%
+%###################################################################################
+% Literaturverzeichnis (beginnt auf einer ungeraden Seite)
+\newpage
+\begin{thebibliography}{Lam00}
+ 
+\end{thebibliography}
+      
+
+
+%###################################################################################
+%  Declaration, that this is my own work
+%
+%###################################################################################
+\newpage
+\thispagestyle{empty}
+\vspace*{8cm}
+\section*{Erklärung}
+
+Hiermit versichere ich, dass ich diese Arbeit selbständig verfasst und keine anderen, als die angegebenen Quellen und Hilfsmittel benutzt, die wörtlich oder inhaltlich übernommenen Stellen als solche kenntlich gemacht und die Satzung des XXXXXXXXXXXXXXXXXXXXXXXXX zur Sicherung guter wissenschaftlicher Praxis in der jeweils gültigen Fassung beachtet habe. \\[2ex] 
+\noindent
+Freiburg i.Br., den \today\\[5ex]
+% Unterschrift (handgeschrieben)
+
+
+
+\end{document}
+
